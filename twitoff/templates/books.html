@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>TwitOff! A Twitter-based tweet prediction engine!</title>
 </head>
 <body>
+    <!-- h1 = header tag -->
+    <h1>Welcome to the Books Page</h1>
+    <!-- p = paragraph tag -->
+    <p>Hola, amigo. From app.py def list_books--> {{message}} {{books}} <--</p>
+    <p>{{books}}</p>
+    <!-- ul = unordered list tag for bulleted lists -->
+    {% if books %}
+    <ul>
+    <!-- li = list item tag -->
+    {% for book in books %}
+
+        <li>{{ book["title"] }}</li>
+    {% endfor %}
+    </ul>
+
+{% else %}
+    <p>Books not found.</p>
+{% endif %}
 
 </body>
 </html>

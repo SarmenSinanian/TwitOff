@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, render_template
 
+
 def create_app():
     """Create and configure and instance of the Flask application."""
     app = Flask(__name__)
@@ -24,6 +25,6 @@ def create_app():
             {'id': 1, 'title': 'book1'},
             {'id': 2, 'title': 'book2'}
         ]
-        return render_template('books.html')
+        return render_template('books.html', message="Here's some books", books=books)
 
     return app
